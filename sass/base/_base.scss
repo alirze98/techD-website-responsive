@@ -1,0 +1,52 @@
+/* --------------------------------------- --------------------- Reset ************************** ************* */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* --------------------------------------- --------------------- GENERAL ************************** ************* */
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; //1rem == 10px
+
+  @include respond(tab-port) {
+    font-size: 56.25%; //1rem == 9px
+  }
+
+  @include respond(phone) {
+    font-size: 50%; //1rem == 8px
+  }
+}
+
+body {
+  background-color: $color-primary;
+  font-family: $font-family-sub;
+  line-height: 1.5;
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+  @include respond(phone) {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+.container {
+  max-width: 134rem;
+  margin: 0 auto;
+
+  @include respond(desktop) {
+    padding: 0 4rem;
+  }
+}

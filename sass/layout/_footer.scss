@@ -1,0 +1,89 @@
+.footer {
+  background-color: $color-primary;
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+
+  // -----**-----Content-----*-----
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4rem;
+    flex-wrap: wrap;
+
+    @include respond(phone) {
+      gap: 3rem;
+    }
+  }
+
+  &__author {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-top: 5rem;
+    border-top: 1px solid $color-quaternary-m-d;
+  }
+
+  &__address-col {}
+
+  &__address {
+    font-size: 1.5rem;
+    opacity: .7;
+    font-style: normal;
+
+    p:first-child {
+      margin-bottom: .5rem;
+    }
+  }
+
+  &__text {
+    font-size: 2rem;
+    opacity: .7;
+
+    span {
+      color: $color-septenary;
+    }
+  }
+
+  &__heading {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+
+  &__contact-col {}
+
+  &__call,
+  &__email {
+    font-size: 1.5rem;
+    opacity: .7;
+  }
+
+  &__call {
+    margin-bottom: .5rem;
+  }
+
+  &__email {}
+
+  &__copyright {
+    font-size: 1.6rem;
+
+    span {
+      color: $color-septenary;
+    }
+  }
+
+  &__list {
+    display: flex;
+    gap: 1rem;
+  }
+
+  &__item {}
+
+  &__link:link,
+  &__link:visited {
+    color: $color-quinary;
+    font-size: 1.5rem;
+
+  }
+}

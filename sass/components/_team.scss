@@ -1,0 +1,33 @@
+.team {
+  text-align: center;
+
+  &__title {
+    margin-bottom: 3rem;
+
+  }
+
+  &__heading-secondary {
+    margin-bottom: 3rem;
+    font-size: 4rem;
+    font-weight: bold;
+  }
+
+  &__text {
+    margin-bottom: 3rem;
+    font-size: 2rem;
+    color: $color-tertiary;
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 12rem;
+    grid-row-gap: 4rem;
+    text-align: start;
+
+    @include respond(phone) {
+      grid-template-columns: 1fr;
+      grid-row-gap: 2rem;
+    }
+  }
+}

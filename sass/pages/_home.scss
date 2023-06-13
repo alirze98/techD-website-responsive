@@ -1,0 +1,42 @@
+.section-hero {
+  background-color: $color-quaternary-m-l;
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+  border-bottom-right-radius: 100% 40%;
+  border-bottom-left-radius: 100% 40%;
+
+  @include respond(tab-land) {
+    border-bottom-right-radius: 100% 20%;
+    border-bottom-left-radius: 100% 20%;
+  }
+}
+
+.section-how {
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+}
+
+.section-features {
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+  background-color: $color-quinary;
+  border-top-left-radius: 100%;
+  border-top-right-radius: 100%;
+
+  @include respond(tab-land) {
+    border-top-left-radius: 100% 20%;
+    border-top-right-radius: 100% 20%;
+  }
+}
+
+.section-contact {
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+  background-color: $color-senary;
+}
+
+.section-team {
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+  background-color: $color-quaternary-m-l;
+}

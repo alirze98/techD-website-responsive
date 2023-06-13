@@ -1,0 +1,70 @@
+.how {
+  align-items: center;
+  grid-row-gap: 5rem;
+
+  &__text-box {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+  }
+
+  &__img {
+    width: 100%;
+  }
+
+  &__text {
+    font-size: 2rem;
+    color: $color-tertiary;
+  }
+
+  &__heading-secondary {
+    font-size: 4rem;
+    font-weight: 700;
+    font-family: $font-family-main;
+    opacity: .8;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    font-size: 1.5rem;
+
+    &:nth-child(1) {}
+
+    &:nth-child(2) {
+      @include respond(phone) {
+        align-self: center;
+      }
+
+      @include respond(phone-sm) {
+        align-self: start;
+      }
+    }
+
+    &:nth-child(3) {
+      @include respond(phone) {
+        align-self: end;
+      }
+
+      @include respond(phone-sm) {
+        align-self: start;
+      }
+    }
+  }
+
+  &__number {
+    background-color: $color-septenary;
+    color: $color-primary;
+    padding: 1rem 2rem;
+    border-radius: 3px;
+    display: inline-block;
+
+  }
+}

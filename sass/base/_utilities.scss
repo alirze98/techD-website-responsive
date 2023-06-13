@@ -1,0 +1,62 @@
+//----------**---------- GRID ----------**----------
+.grid {
+  display: grid;
+}
+
+.grid-2-cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-3-cols {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-2-cols,
+.grid-3-cols {
+  @include respond(phone) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.gutter-h-2 {
+  grid-column-gap: 2rem;
+}
+
+.gutter-h-4 {
+  grid-column-gap: 4rem;
+}
+
+.gutter-h-6 {
+  grid-column-gap: 6rem;
+}
+
+.gutter-h-10 {
+  grid-column-gap: 10rem;
+}
+
+//----------**---------- COLORS ----------**----------
+.color-sc {
+  color: $color-secondary
+}
+
+//----------**---------- SECTION TITLE ----------**----------
+.section-title {
+  display: inline-block;
+  background-color: $color-septenary;
+  color: $color-primary;
+  padding: .5rem 1rem;
+  border-radius: 2rem;
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+
+  &--light {
+    background-color: $color-primary;
+    color: $color-septenary;
+  }
+
+  &--dark {
+    background-color: $color-quinary;
+    color: $color-primary;
+  }
+}

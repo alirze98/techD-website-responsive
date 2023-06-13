@@ -1,0 +1,124 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 3rem 5rem;
+  background-color: $color-quaternary-m-l;
+
+  @include respond(phone) {
+    background-color: $color-quinary;
+    padding: 2rem 5rem;
+    justify-content: center;
+  }
+
+  &.nav-open {
+    nav {
+      transform: translateX(0);
+    }
+  }
+
+
+  &__logo {
+    font-size: 3rem;
+    font-weight: 600;
+
+    span {
+      color: $color-septenary;
+    }
+  }
+
+  &__nav {
+    @include respond(phone) {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 30rem;
+      height: 100vh;
+      background-color: $color-quinary;
+      z-index: 20000;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      transform: translateX(-100rem);
+      transition: all 0.5s cubic-bezier(1, 0, 0, 1);
+
+    }
+  }
+
+  &__list {
+    display: flex;
+    gap: 1.5rem;
+
+    @include respond(phone) {
+      flex-direction: column;
+      gap: 3rem;
+    }
+  }
+
+  &__link:link,
+  &__link:visited {
+    display: inline-block;
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+    color: $color-quinary;
+    border-bottom: 1px solid $color-quaternary-m-d;
+    border-radius: .5rem;
+    transition: all 0.25s ease-in-out;
+
+    @include respond(phone) {
+      color: $color-primary;
+      font-size: 1.8rem;
+    }
+  }
+
+  &__link:hover,
+  &__link:active {
+    background-color: $color-quaternary-m-d;
+    color: $color-primary;
+  }
+
+
+  // -----**-----BTN-MOBILE-NAV-----**-----
+  &__btn-mobile-nav {
+    background: none;
+    border: none;
+    border-radius: 0;
+    outline: none;
+    display: inline-block;
+
+    position: fixed;
+    right: 6rem;
+    top: 4rem;
+    display: none;
+
+    width: 2rem;
+    height: .25rem;
+    background-color: $color-quaternary;
+
+    @include respond(phone) {
+      display: block;
+    }
+
+    &::before,
+    &::after {
+      content: '';
+      display: inline-block;
+      position: absolute;
+      left: 0;
+      height: .25rem;
+      background-color: $color-quaternary;
+    }
+
+    &::before {
+      width: 4rem;
+      top: 1rem;
+    }
+
+    &::after {
+      width: 5rem;
+      top: 2rem;
+    }
+  }
+
+}
